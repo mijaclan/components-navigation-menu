@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>外凸</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+          <span class="text">首页</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+          <span class="text">我的</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+          </span>
+          <span class="text">消息</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+          <span class="text">发现</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+          <span class="text">设置</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+</body>
+</html>
+
+
+<script>
+  const list = document.querySelectorAll('.list');
+  function activeLink() {
+    list.forEach((item) => item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  list.forEach((item) => item.addEventListener('click',activeLink));
+
+</script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
